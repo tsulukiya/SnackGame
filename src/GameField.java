@@ -1,3 +1,5 @@
+import sun.jvm.hotspot.HelloWorld;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -93,9 +95,14 @@ public class GameField extends JPanel implements ActionListener {
 
     }
 
+
+
     public void checkApple() {
         if (x[0] == appleX && y[0] == appleY) {
             dots++;
+            if (dots % 5 == 0) {
+                timer.setDelay(timer.getDelay() - 50);
+            }
             createApple();
         }
     }
@@ -159,6 +166,14 @@ public class GameField extends JPanel implements ActionListener {
                 left = false;
                 down = true;
                 right = false;
+            }
+
+            if (key == KeyEvent.VK_P) {
+                timer.stop();
+            }
+
+            if (key == KeyEvent.VK_O) {
+                timer.start();
             }
         }
     }
