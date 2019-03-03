@@ -1,4 +1,3 @@
-import sun.jvm.hotspot.HelloWorld;
 
 import javax.swing.*;
 import java.awt.*;
@@ -71,7 +70,7 @@ public class GameField extends JPanel implements ActionListener {
             //Font f = new Font("Arial", 14, Font.BOLD);
             g.setColor(Color.red);
             //g.setFont(f);
-            g.drawString(str, 125, SIZE/2);
+            g.drawString(str, 125, SIZE / 2);
         }
     }
 
@@ -94,7 +93,6 @@ public class GameField extends JPanel implements ActionListener {
         }
 
     }
-
 
 
     public void checkApple() {
